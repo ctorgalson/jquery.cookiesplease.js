@@ -25,21 +25,22 @@ suffer from two common problems:
 ### HTML
 
 ```html
-    <!-- Using Foundation's alert boxes -->
-    <div data-alert class="alert-box info cookies-please hide">
-      <div class="row">
-        <div class="columns medium-12">
-          This is an info alert with a radius.
-          <button id="i-like-cookies">Go cookies!</button>
-          <button id="i-hate-cookies">F--- cookies!</button>
-        </div>
-      </div>
+<!-- Using Foundation's alert boxes -->
+<div data-alert class="alert-box info cookies-please hide">
+  <div class="row">
+    <div class="columns medium-12">
+      This is an info alert with a radius.
+      <button id="i-like-cookies">Go cookies!</button>
+      <button id="i-hate-cookies">F--- cookies!</button>
     </div>
+  </div>
+</div>
+```
 
 ### Javascript
 
 ```javascript
-    $(document).ready(function () {
-      $('.alert-info.cookies-please').cookiesPlease();
-    });
-
+$(document).ready(function () {
+  $('.alert-info.cookies-please').cookiesPlease();
+});
+```
