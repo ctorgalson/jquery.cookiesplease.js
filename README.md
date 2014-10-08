@@ -22,6 +22,14 @@ suffer from two common problems:
 
 ## Usage
 
+### Configurable options
+
+The plugin can be configured by passing it a javascript object containing any or all of the three following options:
+
+* `iLikeCookiesSelector` (string): a valid CSS selector uniquely identifying the element the user needs to click/tap/etc to agree to accept cookies (default: `#i-like-cookies`)
+* `ihateCookiesSelector` (string): a valid CSS selector uniquely identifying the element the user needs to click/tap/etc to refuse to accept cookies (default: `#i-hate-cookies`)
+* `cookieExpiry` (int): the cookie we set to store the user's preferences re: cookies will expire in this many days (default: `1`)
+
 ### HTML
 
 ```html
