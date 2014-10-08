@@ -14,7 +14,7 @@ suffer from two common problems:
 2. **They sometimes have unnecessarily complex ways of integrating with
    other scripts**. This one sets a cookie you can use to decide how or
    whether to call other scripts.
-3. **They can be fairly large scripts**. This one is relatively small (about 500 bytes uncompressed).
+3. **They can be fairly large scripts**. This one is relatively small (about 500 bytes minified and uncompressed, under 300 bytes gzipped).
 4. **They sometimes impose a specific choice model**. This one allows
    you to use 'Yes' and 'No' buttons, or simply a 'Yes' button (i.e.
    with text like "You need to have cookies enabled for this website to
