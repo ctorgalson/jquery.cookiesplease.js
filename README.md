@@ -24,6 +24,7 @@ suffer from two common problems:
 
 ### HTML
 
+```html
     <!-- Using Foundation's alert boxes -->
     <div data-alert class="alert-box info cookies-please hide">
       <div class="row">
@@ -37,6 +38,7 @@ suffer from two common problems:
 
 ### Javascript
 
+```javascript
     $(document).ready(function () {
       $('.alert-info.cookies-please').cookiesPlease();
     });
