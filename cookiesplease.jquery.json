@@ -1,0 +1,27 @@
+{
+  "name": "cookiesplease",
+  "title": "Cookies Please",
+  "description": "This is a very simple plugin for dealing with the EU's guidelines on Cookies. It does only one job: attempt to set a single cookie with the user's cookie preference. This cookie can be used (in conjunction with jquery.cookie, a dependency of this plugin) by other scripts to find out if they can/should use cookies. It can even be used to determine whether other scripts can be loaded at all.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ctorgalson/jquery.cookiesplease.js",
+  "author": {
+    "name": "Christopher Torgalson",
+    "email": "manager@bedlamhotel.com",
+    "url": "https://bedlamhotel.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ctorgalson/jquery.cookiesplease.js.git"
+  },
+  "bugs": "https://github.com/ctorgalson/jquery.cookiesplease.js/issues",
+  "licenses": [
+    {
+      "type": "GPL",
+      "url": "https://github.com/ctorgalson/jquery.cookiesplease.js/blob/master/LICENSE-GPL"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}

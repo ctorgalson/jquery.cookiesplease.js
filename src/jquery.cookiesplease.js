@@ -1,4 +1,12 @@
-(function($){
+/*
+ * cookiesplease
+ * https://github.com/ctorgalson/jquery.cookiesplease.js
+ *
+ * Copyright (c) 2014 Christopher Torgalson
+ * Licensed under the GPL license.
+ */
+
+(function($) {
   "use strict";
   /**
    * @param object overrides
@@ -53,4 +61,4 @@
       }
     });
   };
-})(jQuery);
+}(jQuery));
