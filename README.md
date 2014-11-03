@@ -3,28 +3,60 @@
 This is a very simple plugin for dealing with the EU's guidelines on Cookies. It does only one job: attempt to set a single cookie with the user's cookie preference. This cookie can be used (in conjunction with jquery.cookie, a dependency of this plugin) by other scripts to find out if they can/should use cookies. It can even be used to determine whether other scripts can be loaded at all.
 
 ## Getting Started
+
 Download the [production version][min] or the [development version][max].
 
 [min]: https://raw.github.com/ctorgalson/jquery.cookiesplease.js/master/dist/cookiesplease.min.js
 [max]: https://raw.github.com/ctorgalson/jquery.cookiesplease.js/master/dist/cookiesplease.js
 
-In your web page:
+## Why another cookie plugin?
+
+There are already lots of plugins like this, but the ones I've looked at
+suffer from two common problems:
+
+1. **They often insist on providing their own markup and css**. This is
+   aggravating if you're already working with a front-end framework like
+   [Zurb's Foundation](http://foundation.zurb.com/) or [Twitter's Bootstrap](http://getbootstrap.com/).
+   This one is a jQuery plugin called on a jQuery collection.
+2. **They sometimes have unnecessarily complex ways of integrating with
+   other scripts**. This one sets a cookie you can use to decide how or
+   whether to call other scripts.
+3. **They can be fairly large scripts**. This one is relatively small (about 500 bytes minified and uncompressed, under 300 bytes gzipped).
+4. **They sometimes impose a specific choice model**. This one allows
+   you to use 'Yes' and 'No' buttons, or simply a 'Yes' button (i.e.
+   with text like "You need to have cookies enabled for this website to
+   work [ Ok ]"
+
+## Usage
+
+### Configurable options
+
+The plugin can be configured by passing it a javascript object containing any or all of the three following options:
+
+* `iLikeCookiesSelector` (string): a valid CSS selector uniquely identifying the element the user needs to click/tap/etc to agree to accept cookies (default: `#i-like-cookies`)
+* `ihateCookiesSelector` (string): a valid CSS selector uniquely identifying the element the user needs to click/tap/etc to refuse to accept cookies (default: `#i-hate-cookies`)
+* `cookieExpiry` (int): the cookie we set to store the user's preferences re: cookies will expire in this many days (default: `1`)
+
+### HTML
 
 ```html
-<script src="jquery.js"></script>
-<script src="dist/cookiesplease.min.js"></script>
-<script>
-jQuery(function($) {
-  $.awesome(); // "awesome"
-});
-</script>
+<!-- Using Foundation's alert boxes -->
+<div data-alert class="alert-box info cookies-please hide">
+  <div class="row">
+    <div class="columns medium-12">
+      This is an info alert with a radius.
+      <button id="i-like-cookies">Go cookies!</button>
+      <button id="i-hate-cookies">F--- cookies!</button>
+    </div>
+  </div>
+</div>
 ```
 
-## Documentation
-_(Coming soon)_
+### Javascript
 
-## Examples
-_(Coming soon)_
+```javascript
+$(document).ready(function () {
+  $('.alert-info.cookies-please').cookiesPlease();
+});
+```
 
-## Release History
-_(Nothing yet)_
