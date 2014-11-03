@@ -1,5 +1,7 @@
 # Cookies Please
 
+[![Build Status](https://travis-ci.org/ctorgalson/jquery.cookiesPlease.js.png?branch=master)](https://travis-ci.org/ctorgalson/jquery.cookiesPlease.js)
+
 This is a very simple plugin for dealing with the EU's guidelines on Cookies. It does only one job: attempt to set a single cookie with the user's cookie preference. This cookie can be used (in conjunction with jquery.cookie, a dependency of this plugin) by other scripts to find out if they can/should use cookies. It can even be used to determine whether other scripts can be loaded at all.
 
 ## Getting Started
