@@ -2,7 +2,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     uglify: {
       options: {
-        mangle: true
+        mangle: true,
+        sourceMap: true
       },
       pack: {
         files: {
@@ -14,5 +15,5 @@ module.exports = function(grunt) {
     }
   });
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask("package", ["uglify"]);
+  grunt.registerTask('package', ['uglify']);
 };
