@@ -12,7 +12,7 @@ Download the [production version][min] or the [development version][max].
 ## Why another cookie plugin?
 
 There are already lots of plugins like this, but the ones I've looked at
-suffer from two common problems:
+suffer from a few common problems:
 
 1. **They often insist on providing their own markup and css**. This is
    aggravating if you're already working with a front-end framework like
