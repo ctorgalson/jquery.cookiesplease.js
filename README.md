@@ -17,7 +17,9 @@ suffer from two common problems:
 1. **They often insist on providing their own markup and css**. This is
    aggravating if you're already working with a front-end framework like
    [Zurb's Foundation](http://foundation.zurb.com/) or [Twitter's Bootstrap](http://getbootstrap.com/).
-   This one is a jQuery plugin called on a jQuery collection.
+   This one is a jQuery plugin called on a jQuery collection; it's completely
+   agnostic about the html of the dialogue containing the buttons, and the
+   selectors it uses to identify the dialogue and the buttons are configurable.
 2. **They sometimes have unnecessarily complex ways of integrating with
    other scripts**. This one sets a cookie you can use to decide how or
    whether to call other scripts.
@@ -29,13 +31,14 @@ suffer from two common problems:
 
 ## Usage
 
-### Configurable options
+When set up as shown below, a click on the "Go cookies!" button will create a
+cookie, `cookiesPlease`, with the value `yes`.
 
-The plugin can be configured by passing it a javascript object containing any or all of the three following options:
+When set up as shown below, a click on the "F--- cookies!" button will create a
+cookie, `cookiesPlease`, with the value `no`.
 
-* `iLikeCookiesSelector` (string): a valid CSS selector uniquely identifying the element the user needs to click/tap/etc to agree to accept cookies (default: `#i-like-cookies`)
-* `ihateCookiesSelector` (string): a valid CSS selector uniquely identifying the element the user needs to click/tap/etc to refuse to accept cookies (default: `#i-hate-cookies`)
-* `cookieExpiry` (int): the cookie we set to store the user's preferences re: cookies will expire in this many days (default: `1`)
+Other scripts can be run&mdash;or not&mdash;according to the value of the
+cookie.
 
 ### HTML
 
@@ -60,3 +63,10 @@ $(document).ready(function () {
 });
 ```
 
+### Configurable options
+
+The plugin can be configured by passing it a javascript object containing any or all of the three following options:
+
+* `iLikeCookiesSelector` (string): a valid CSS selector uniquely identifying the element the user needs to click/tap/etc to agree to accept cookies (default: `#i-like-cookies`)
+* `ihateCookiesSelector` (string): a valid CSS selector uniquely identifying the element the user needs to click/tap/etc to refuse to accept cookies (default: `#i-hate-cookies`)
+* `cookieExpiry` (int): the cookie we set to store the user's preferences re: cookies will expire in this many days (default: `1`)
